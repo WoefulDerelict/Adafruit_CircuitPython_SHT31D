@@ -72,6 +72,14 @@ _SHT31_SOFTRESET = const(0x30A2)
 _SHT31_NOSLEEP = const(0x303E)
 _SHT31_PERIODIC_FETCH = const(0xE000)
 _SHT31_PERIODIC_BREAK = const(0x3093)
+_SHT31_R_AL_LIM_LS = const(0xE102) # read alert limits, low set
+_SHT31_R_AL_LIM_LC = const(0xE109) # read alert limits, low clear
+_SHT31_R_AL_LIM_HS = const(0xE11F) # read alert limits, high set
+_SHT31_R_AL_LIM_HC = const(0xE114) # read alert limits, high clear
+_SHT31_W_AL_LIM_HS = const(0x611D) # write alert limits, high set
+_SHT31_W_AL_LIM_HC = const(0x6116) # write alert limits, high clear
+_SHT31_W_AL_LIM_LC = const(0x610B) # write alert limits, low clear
+_SHT31_W_AL_LIM_LS = const(0x6100) # write alert limits, low set
 
 MODE_SINGLE = 'Single'
 MODE_PERIODIC = 'Periodic'
