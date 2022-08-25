@@ -3,16 +3,20 @@ Introduction
 ============
 
 .. image:: https://readthedocs.org/projects/adafruit-circuitpython-sht31d/badge/?version=latest
-    :target: https://circuitpython.readthedocs.io/projects/sht31d/en/latest/
+    :target: https://docs.circuitpython.org/projects/sht31d/en/latest/
     :alt: Documentation Status
 
-.. image :: https://img.shields.io/discord/327254708534116352.svg
-    :target: https://discord.gg/nBQh6qu
+.. image:: https://raw.githubusercontent.com/adafruit/Adafruit_CircuitPython_Bundle/main/badges/adafruit_discord.svg
+    :target: https://adafru.it/discord
     :alt: Discord
 
 .. image:: https://github.com/adafruit/Adafruit_CircuitPython_SHT31D/workflows/Build%20CI/badge.svg
     :target: https://github.com/adafruit/Adafruit_CircuitPython_SHT31D/actions/
     :alt: Build Status
+
+.. image:: https://img.shields.io/badge/code%20style-black-000000.svg
+    :target: https://github.com/psf/black
+    :alt: Code Style: Black
 
 CircuitPython module for the SHT31-D temperature and humidity sensor.
 
@@ -52,7 +56,7 @@ To install in a virtual environment in your current project:
     python3 -m venv .env
     source .env/bin/activate
     pip3 install adafruit-circuitpython-sht31d
-    
+
 Usage Example
 =============
 You must import the library to use it:
@@ -63,15 +67,13 @@ You must import the library to use it:
 
 This driver takes an instantiated and active I2C object (from the `busio` or
 the `bitbangio` library) as an argument to its constructor.  The way to create
-an I2C object depends on the board you are using. For boards with labeled SCL
-and SDA pins, you can:
+an I2C object depends on the board you are using.
 
 .. code:: python
 
-    from busio import I2C
-    from board import SCL, SDA
+    import board
 
-    i2c = I2C(SCL, SDA)
+    i2c = board.I2C()
 
 Once you have created the I2C interface object, you can use it to instantiate
 the sensor object:
@@ -120,14 +122,16 @@ returned to single shot data acquisition mode:
 
     sensor.mode = adafruit_sht31d.MODE_SINGLE
 
+Documentation
+=============
+
+API documentation for this library can be found on `Read the Docs <https://docs.circuitpython.org/projects/sht31d/en/latest/>`_.
+
+For information on building library documentation, please check out `this guide <https://learn.adafruit.com/creating-and-sharing-a-circuitpython-library/sharing-our-docs-on-readthedocs#sphinx-5-1>`_.
+
 Contributing
 ============
 
 Contributions are welcome! Please read our `Code of Conduct
-<https://github.com/adafruit/Adafruit_CircuitPython_SHT31D/blob/master/CODE_OF_CONDUCT.md>`_
+<https://github.com/adafruit/Adafruit_CircuitPython_SHT31D/blob/main/CODE_OF_CONDUCT.md>`_
 before contributing to help this project stay welcoming.
-
-Documentation
-=============
-
-For information on building library documentation, please check out `this guide <https://learn.adafruit.com/creating-and-sharing-a-circuitpython-library/sharing-our-docs-on-readthedocs#sphinx-5-1>`_.
